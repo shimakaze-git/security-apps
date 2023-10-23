@@ -1,0 +1,33 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.languageServer": "Pylance",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.formatting.provider": "none",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.analysis.extraPaths": [
+    "/usr/local/lib/python3.11/site-packages/"
+    // "../backends"
+  ],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.autopep8Args": [],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "information",
+    "reportMissingTypeArgument": "none"
+  },
+  "yaml.schemaStore.enable": false
+}

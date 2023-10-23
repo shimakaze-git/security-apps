@@ -1,0 +1,15 @@
+{
+  "pythonVersion": "3.11",
+  "include": [],
+  "exclude": [
+    "**/.ipynb_checpoints",
+    "**/__pycache__",
+    "typings",
+    "venv",
+    ".venv",
+    "backends/db/models"
+  ],
+  "ignore": [],
+  "reportUnusedImport": "information",
+  "reportMissingTypeArgument": "none"
+}

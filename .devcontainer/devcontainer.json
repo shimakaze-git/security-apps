@@ -1,0 +1,29 @@
+{
+  // https://code.visualstudio.com/docs/remote/containers#_system-requirements
+  "name": "return_api",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "bullseye"
+    }
+  },
+  "runArgs": [
+    // Sync git config
+    "-v",
+    "${env:HOME}${env:USERPROFILE}/.gitconfig:/root/.gitconfig"
+    // "--env-file=backends/builds/api/.env"
+  ],
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.analysis.extraPaths": [
+          "/usr/local/lib/python3.11/site-packages/"
+        ]
+      },
+      "extensions": ["editorconfig.editorconfig", "ms-python.python"]
+    }
+  },
+  "postCreateCommand": ""
+}

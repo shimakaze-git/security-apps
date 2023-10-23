@@ -1,0 +1,8 @@
+# (optional) list included test IDs here, eg '[B101, B406]':
+tests:
+skips: ["B101"]
+
+# globs of files which should be analyzed
+include:
+  - "*.py"
+  - "*.pyw"

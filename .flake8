@@ -1,0 +1,12 @@
+[flake8]
+ignore=E402, A003, E711, E712, W504, W503, DUO123
+exclude=.git,*migrations*
+per-file-ignores=__init__.py:F401
+max-complexity=10
+max-line-length=130
+
+classmethod-decorators =
+    classmethod
+    validator
+
+max-cognitive-complexity = 9

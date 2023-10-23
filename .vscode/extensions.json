@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "ms-python.python",
+    "ms-vscode-remote.remote-containers",
+    "LittleFoxTeam.vscode-python-test-adapter",
+    "dongli.python-preview",
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "4ops.terraform",
+    "ryanluker.vscode-coverage-gutters",
+    "arjun.swagger-viewer",
+    "mermade.openapi-lint",
+    "42crunch.vscode-openapi",
+    "proohit.openapi-snippets",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
