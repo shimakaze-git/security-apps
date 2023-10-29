@@ -64,3 +64,46 @@ TCP通信を行うのであれば`SOCK_STREAM`、UDP通信を行うのであれ�
 `SOCK_SEQPACKET`や`SOCK_RAW`など上記以外にも複数のソケットタイプがある。
 
 [socket linux manual page](https://man7.org/linux/man-pages/man2/socket.2.html)
+
+# 動作チェック
+
+```bash
+$ python server_side.py
+Server [started] : ('127.0.0.1', 8890)
+[message_resp] response: (aaaa)
+[message_resp] response: (bbb)
+[message_resp] response: ()
+[message_resp] response: ()
+```
+
+```bash
+$ python client_side.py
+> aaaa
+response: (aaaa)
+> bbb
+response: (bbb)
+> .quit
+```
+
+## HTTP Request Check
+
+TCPソケット通信のサーバに対して`curl`コマンドで`HTTPのPOSTリクエスト`を投げてみる。
+
+以下を行ってみると、実際にサーバ側ではPOSTリクエストを正常に受信できていることが確認できる。
+
+この結果からHTTPの通信はTCPソケット通信を用いた単なるテキストデータの交換であることがわかる。
+
+```bash
+$ python server_side.py
+Server [started] : ('127.0.0.1', 8890)
+[message_resp] response: (POST / HTTP/1.1
+Host: localhost:8890
+User-Agent: curl/7.87.0
+Accept: */*
+Content-Length: 7
+Content-Type: application/x-www-form-urlencoded
+```
+
+```bash
+$ curl -d "hogehge" localhost:8890
+```
